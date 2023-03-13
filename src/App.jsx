@@ -9,45 +9,47 @@ import {
 import Navbar from './Navbar';
 import logo from './assets/logo.png';
 import Footer from './Footer';
-
-
-/* const MyButton = styled.button`
-  padding: 4em;
-  background-color: papayawhip;
-`; */
-
-/* const HeaderContainer = styled.div`
-  grid-area: 1 / 1 / span 1 / span 1;
-  background-color: #8b8989;
-  height: 100px;
-  width: 100vw;
-  z-index: -1;
-`; */
+import About from './pages/About';
+import Home from './pages/Home';
+import Contact from './pages/Contact';
+import Portfolio from './pages/Portfolio';
 
 const LogoContainer = styled.div`
-  max-width: 4rem;
-  grid-area: logo;
-  margin-top: 1em;
-  margin-left: 1em;
+  max-width: 10rem;
+  grid-area: top;
+  grid-area: 1 / 1 / span 1 / span 1;
+  margin-top: 2em;
+  margin-left: 2em;
+`;
+
+const HeaderContainer = styled.div`
+  width: 100vw;
+  max-height: 80px;
+  grid-area: top;
+  background-color: #262626;
 `;
 
 const StyledImg = styled.img`
-width: 100%;
+  width: 100%;
 `;
 
 const MainContainer = styled.div`
   grid-area: main;
-  background-color: #dfdede;
+  margin-top: 5em;
   height: 2000px;
+  padding-left: 2em;
+  padding-right: 2em;
 `;
 
 const GridContainer = styled.div`
   display: grid;
-  grid-template-rows:  7rem repeat(3, 1fr) 10rem;
+  grid-template-rows:  5rem repeat(3, 1fr) 7rem;
   grid-template-columns: repeat(5, 1fr);
-  grid-gap: 10px;
+
+  background-color: #d7d1cb;
+
   grid-template-areas: 
-  "logo top top top top"
+  "top top top top top"
   "main main main main main"
   "main main main main main"
   "main main main main main"
@@ -61,32 +63,38 @@ function App() {
     <Router>
       <GridContainer>
 
-        <LogoContainer>
-          <StyledImg src={logo} alt="Logo" />
-        </LogoContainer>
+        <HeaderContainer>
+          <LogoContainer>
+            <StyledImg src={logo} alt="Logo" />
+          </LogoContainer>
+
+
+        </HeaderContainer>
+
         <Navbar />
 
         <MainContainer>
           <Switch>
-            <Route path="/about">
-              <p>About</p>
+            <Route path="/About">
+              <About />
             </Route>
-            <Route path="/portfolio">
-              <p>Portfolio</p>
+            <Route path="/Portfolio">
+              <Portfolio />
             </Route>
             <Route path="/">
-              <p>Home</p>
+              <Home />
+            </Route>
+            <Route path="/Contact">
+              <Contact />
             </Route>
           </Switch>
-          <h1>Hello Deniz</h1>
         </MainContainer>
 
         <Footer />
 
       </GridContainer>
-    </Router>
+    </Router >
   );
 }
-
 
 export default App;

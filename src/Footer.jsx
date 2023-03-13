@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import instaicon from './assets/insta.png';
+import downloadicon from './assets/download.png';
 import liicon from './assets/linkedin.png';
+import MyPDF from './assets/CV_Deniz_Aktas.pdf';
 
 const StyledFooter = styled.footer`
     display: flex;
@@ -9,13 +10,15 @@ const StyledFooter = styled.footer`
     justify-content: center;
     align-items: center;
     grid-area: footer;
-    background-color: #fdece8;
+    background-color: #262626;
+    color: #fdece8;
     max-height: 5em;
-    width: 100vw;;
+    width: 100vw;
     z-index: 2;
 /*  grid-area: footer; */
     position: fixed;
     bottom: 0;
+    font-size: 0.9em;
 `;
 
 const IconContainer = styled.div`
@@ -26,19 +29,19 @@ const IconContainer = styled.div`
 `;
 
 const StyledLogo = styled.img`
-width: 2em;
+
+height: 3em;
 margin: 0.5em;
-;
 `;
 
 const Footer = () => {
     return (
         <StyledFooter>
-            <p>Copyright Deniz Aktas ©</p>
 
             <IconContainer>
-                <a href="https://instagram.com"><StyledLogo src={instaicon} alt="Instagram Logo" /></a>
                 <a href="https://linkedin.com"><StyledLogo src={liicon} alt="LinkedIn Logo" /></a>
+
+                <a href={MyPDF} download="CV_Deniz_Aktas.pdf"><StyledLogo src={downloadicon} alt="Download link" /></a>
             </IconContainer>
 
         </StyledFooter>
