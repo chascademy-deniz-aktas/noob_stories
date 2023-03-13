@@ -19,8 +19,8 @@ const StyledFooter = styled.footer`
 `;
 
 const IconContainer = styled.div`
-display: flex;
-flex-direction: row;
+    display: flex;
+    flex-direction: row;
     padding: 0.5em;
 
 `;
