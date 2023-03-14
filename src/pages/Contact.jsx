@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Form from '../components/form';
+import Form from '../components/Form';
 
 function Contact() {
 
     return (
         <>
-            <p>Contact</p>
-            <Form placeholder="Your email" test={5} />
+            <p>This is the Contact-page</p>
+            <Form />
         </>
     );
 }

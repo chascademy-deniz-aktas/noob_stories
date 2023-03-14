@@ -6,7 +6,7 @@ function Portfolio() {
 
     return (
         <>
-            <p>Portfolio</p>
+            <p>This is where the Portfolio goes</p>
 
         </>
     );

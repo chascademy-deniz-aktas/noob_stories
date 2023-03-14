@@ -4,7 +4,7 @@ import styled from 'styled-components';
 function About() {
 
     return (
-        <p>About</p>
+        <p>Read About me</p>
     );
 }
 

@@ -6,14 +6,17 @@ import {
   Switch
 } from "react-router-dom";
 
-import Navbar from './Navbar';
-import logo from './assets/logo.png';
-import Footer from './Footer';
-import About from './pages/About';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Portfolio from './pages/Portfolio';
-import stormtrooper from './assets/Stormtrooper.jpg';
+import About from './pages/About';
+
+import Navbar from './Navbar';
+import logo from './assets/logo.png';
+import Footer from './Footer';
+
+
+
 
 const LogoContainer = styled.div`
   max-width: 10rem;
@@ -21,11 +24,6 @@ const LogoContainer = styled.div`
   grid-area: 1 / 1 / span 1 / span 1;
   margin-top: 2em;
   margin-left: 2em;
-`;
-
-const MainImgcontainer = styled.div`
-max-width: 50vw;
-grid-area: 2 / 1 / span 2 / span 2;
 `;
 
 const HeaderContainer = styled.div`
@@ -51,9 +49,7 @@ const GridContainer = styled.div`
   display: grid;
   grid-template-rows:  5rem repeat(3, 1fr) 7rem;
   grid-template-columns: repeat(5, 1fr);
-
   background-color: #d7d1cb;
-
   grid-template-areas: 
   "top top top top top"
   "main main main main main"
@@ -73,34 +69,27 @@ function App() {
           <LogoContainer>
             <StyledImg src={logo} alt="Logo" />
           </LogoContainer>
-
-
         </HeaderContainer>
 
         <Navbar />
 
         <MainContainer>
           <Switch>
-            <Route path="/About">
+            <Route path="/contact">
+              <Contact />
+            </Route>
+            <Route path="/about">
               <About />
             </Route>
-            <Route path="/Portfolio">
+            <Route path="/portfolio">
               <Portfolio />
             </Route>
             <Route path="/">
               <Home />
             </Route>
-            <Route path="/Contact">
-              <Contact />
-            </Route>
           </Switch>
-
-
-          <MainImgcontainer>
-            <StyledImg src={stormtrooper} alt="Logo" />
-          </MainImgcontainer>
-
         </MainContainer>
+
         <Footer />
 
       </GridContainer>
