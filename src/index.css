@@ -14,3 +14,15 @@ body {
   margin: 0;
   
 }
+
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+  }
+
+@media (max-width: 600px) {
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+}

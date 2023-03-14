@@ -9,6 +9,7 @@ const StyledNav = styled.nav`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     grid-area: top;
     grid-area: 1 / 3 / span 1 / span 1;
     max-width: 7em;

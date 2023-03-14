@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import omar from '../assets/omar.jpg';
 
 const MainImgcontainer = styled.div`
-    min-width: 75vw;
+    min-width: 50vw;
     grid-area: 2 / 1 / span 2 / span 5;
 `;
 
 const StyledMainimg = styled.img`
-    width: 100%;
+    width: auto;
     border-radius: 5px;
     border: 0.5px solid #A5A5A5;
 `;

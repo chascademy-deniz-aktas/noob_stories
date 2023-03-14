@@ -6,6 +6,8 @@ import {
   Switch
 } from "react-router-dom";
 
+/* import "./styles.css"; */
+
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Portfolio from './pages/Portfolio';
@@ -26,6 +28,10 @@ const LogoContainer = styled.div`
   margin-left: 2em;
 `;
 
+const StyledImg = styled.img`
+  width: 100%;
+`;
+
 const HeaderContainer = styled.div`
   width: 100vw;
   max-height: 80px;
@@ -33,14 +39,9 @@ const HeaderContainer = styled.div`
   background-color: #262626;
 `;
 
-const StyledImg = styled.img`
-  width: 100%;
-`;
-
 const MainContainer = styled.div`
   grid-area: main;
   margin-top: 5em;
-  height: 1000px;
   padding-left: 2em;
   padding-right: 2em;
 `;
