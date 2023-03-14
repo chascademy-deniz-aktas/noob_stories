@@ -8,7 +8,8 @@ const MainImgcontainer = styled.div`
 `;
 
 const StyledMainimg = styled.img`
-    width: auto;
+    width: 50vw;
+    
     border-radius: 5px;
     border: 0.5px solid #A5A5A5;
 `;

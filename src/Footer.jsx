@@ -25,13 +25,11 @@ const IconContainer = styled.div`
     display: flex;
     flex-direction: row;
     padding: 0.5em;
-
 `;
 
 const StyledLogo = styled.img`
-
-height: 3em;
-margin: 0.5em;
+    height: 3em;
+    margin: 0.5em;
 `;
 
 const Footer = () => {

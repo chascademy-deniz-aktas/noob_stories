@@ -6,37 +6,27 @@ import {
   Switch
 } from "react-router-dom";
 
-/* import "./styles.css"; */
-
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Portfolio from './pages/Portfolio';
-import About from './pages/About';
+import Persona from './pages/Persona';
+import Knowledge from './pages/Knowledge';
 
 import Navbar from './Navbar';
-import logo from './assets/logo.png';
 import Footer from './Footer';
 
-
-
-
-const LogoContainer = styled.div`
-  max-width: 10rem;
-  grid-area: top;
-  grid-area: 1 / 1 / span 1 / span 1;
-  margin-top: 2em;
-  margin-left: 2em;
-`;
-
-const StyledImg = styled.img`
-  width: 100%;
-`;
-
 const HeaderContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  z-index: 1;
+  position: fixed;
+  top: 0;
   width: 100vw;
-  max-height: 80px;
+  height: 7.3em;
   grid-area: top;
   background-color: #262626;
+  justify-content: space-between;
 `;
 
 const MainContainer = styled.div`
@@ -67,23 +57,22 @@ function App() {
       <GridContainer>
 
         <HeaderContainer>
-          <LogoContainer>
-            <StyledImg src={logo} alt="Logo" />
-          </LogoContainer>
+          <Navbar />
         </HeaderContainer>
-
-        <Navbar />
 
         <MainContainer>
           <Switch>
+            <Route path="/persona">
+              <Persona />
+            </Route>
             <Route path="/contact">
               <Contact />
             </Route>
-            <Route path="/about">
-              <About />
-            </Route>
             <Route path="/portfolio">
               <Portfolio />
+            </Route>
+            <Route path="/knowledge">
+              <Knowledge />
             </Route>
             <Route path="/">
               <Home />

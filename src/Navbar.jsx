@@ -4,36 +4,58 @@ import {
     Link
 } from "react-router-dom";
 
+import logo from './assets/logo.png';
+
+
+//Logo in header
+const LogoContainer = styled.div`
+  max-width: 4rem;
+  grid-area: 1 / 1 / span 1 / span 1;
+  margin-top: 1em;
+  margin-left: 2em;
+`;
+
+const StyledImg = styled.img`
+  width: 100%;
+`;
+
+//Navmenu in header
 const StyledNav = styled.nav`
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    position: relative;
     grid-area: top;
-    grid-area: 1 / 3 / span 1 / span 1;
-    max-width: 7em;
+    float: right;
+    max-width: 5em;
     margin-top: 0.8em;
+    margin-right: 3em;
 `;
 
 const StyledLink = styled(Link)`
     color: #FFFFFF;
-    background-color: #7F9183;
-    border-radius: 5px;
     text-decoration: none;
-    padding: 0.1em 0.5em 0.1em 0.5em;
-    margin: 8px;
+    padding: 0.3em;
+    margin: 5px;
     font-size: 0.9em;
+    text-transform: uppercase;
 `;
 
 const Navbar = () => {
     return (
-        <StyledNav>
-            <StyledLink to="/">Home</StyledLink>
-            <StyledLink to="/contact">Contact</StyledLink>
-            <StyledLink to="/portfolio">Portfolio</StyledLink>
-            <StyledLink to="/about">About</StyledLink>
-        </StyledNav>
+        <>
+            <LogoContainer>
+                <StyledImg src={logo} alt="Logo" />
+            </LogoContainer>
+
+            <StyledNav>
+                <StyledLink to="/contact">Contact</StyledLink>
+                <StyledLink to="/portfolio">Portfolio</StyledLink>
+                <StyledLink to="/knowledge">Knowledge</StyledLink>
+                <StyledLink to="/persona">Persona</StyledLink>
+                <StyledLink to="/">Home</StyledLink>
+            </StyledNav>
+        </>
     );
 }
 
