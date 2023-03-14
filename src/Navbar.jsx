@@ -13,8 +13,6 @@ const StyledNav = styled.nav`
     grid-area: 1 / 3 / span 1 / span 1;
     max-width: 7em;
     margin-top: 0.8em;
-
-
 `;
 
 const StyledLink = styled(Link)`

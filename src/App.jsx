@@ -13,6 +13,7 @@ import About from './pages/About';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Portfolio from './pages/Portfolio';
+import stormtrooper from './assets/Stormtrooper.jpg';
 
 const LogoContainer = styled.div`
   max-width: 10rem;
@@ -20,6 +21,11 @@ const LogoContainer = styled.div`
   grid-area: 1 / 1 / span 1 / span 1;
   margin-top: 2em;
   margin-left: 2em;
+`;
+
+const MainImgcontainer = styled.div`
+max-width: 50vw;
+grid-area: 2 / 1 / span 2 / span 2;
 `;
 
 const HeaderContainer = styled.div`
@@ -88,8 +94,13 @@ function App() {
               <Contact />
             </Route>
           </Switch>
-        </MainContainer>
 
+
+          <MainImgcontainer>
+            <StyledImg src={stormtrooper} alt="Logo" />
+          </MainImgcontainer>
+
+        </MainContainer>
         <Footer />
 
       </GridContainer>
