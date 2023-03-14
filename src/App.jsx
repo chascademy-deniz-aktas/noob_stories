@@ -40,7 +40,7 @@ const StyledImg = styled.img`
 const MainContainer = styled.div`
   grid-area: main;
   margin-top: 5em;
-  height: 2000px;
+  height: 1000px;
   padding-left: 2em;
   padding-right: 2em;
 `;

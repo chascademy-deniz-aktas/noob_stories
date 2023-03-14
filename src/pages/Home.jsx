@@ -1,23 +1,25 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import stormtrooper from '../assets/stormtrooper.png';
+import omar from '../assets/omar.jpg';
 
 const MainImgcontainer = styled.div`
-max-width: 50vw;
-grid-area: 2 / 1 / span 2 / span 2;
+    min-width: 75vw;
+    grid-area: 2 / 1 / span 2 / span 5;
 `;
 
 const StyledMainimg = styled.img`
-  width: 50vw;
-  border-radius: 3px;
+    width: 100%;
+    border-radius: 5px;
+    border: 0.5px solid #A5A5A5;
 `;
 
 function Home() {
     return (
         <>
-            <p>This is the Home-page</p>
+            <h1>"COME AT THE KING, YOU BEST NOT MISS."</h1>
+            <p>- Omar Little</p>
             <MainImgcontainer>
-                <StyledMainimg src={stormtrooper} alt="Star Wars stormtrooper in sand" />
+                <StyledMainimg src={omar} alt="Omar Little in The Wire" />
             </MainImgcontainer>
         </>
     );
